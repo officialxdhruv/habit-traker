@@ -35,11 +35,11 @@ export default function Home() {
         if (Array.isArray(storedHabits)) {
             setHabits(storedHabits);
         }
-    }, [getItem]);
+    }, []);
 
     useEffect(() => {
         setItem(habits);
-    }, [habits, setItem]);
+    }, [habits]);
 
     const addHabit = () => {
         if (newHabitName.trim() === "")
